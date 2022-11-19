@@ -5,7 +5,7 @@ import { InputText } from "primereact/inputtext";
 import CadastroTelefone from "../../components/telefoneRegister/CadastroTell";
 import Tab from "react-bootstrap/Tab";
 import Tabs from "react-bootstrap/Tabs";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import DependenteCadastro from "../../components/DepsRegister";
 import { useFieldArray, useForm } from "react-hook-form";
 import {
