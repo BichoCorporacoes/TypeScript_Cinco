@@ -60,7 +60,7 @@ export default class DocumentoRegistro {
     });
 
     return (
-      <Form onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)} className="docs-controll">
         {[
           status.type === "error" ? (
             <Alert
@@ -74,76 +74,78 @@ export default class DocumentoRegistro {
             ""
           ),
         ]}
-        {fields.map((item, index) => {
-          return (
-            <div key={item.id}>
-              <Form.Group className="controll-info">
-                <div className="label-numbers">
-                  <InputGroup className="mb-3">
-                    <InputGroup.Text id="inputGroup-sizing-default">
-                      Tipo
-                    </InputGroup.Text>
-                    <Form.Control
-                      {...register(`documentos.${index}.tipo`)}
-                      placeholder="Digite o tipo do Documento : CPF, RG ou Passaporte"
-                      aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </InputGroup>
-                </div>
-                <div className="label-numbers">
-                  <InputGroup className="mb-3">
-                    <InputGroup.Text id="inputGroup-sizing-default">
-                      Numero do Documento
-                    </InputGroup.Text>
-                    <Form.Control
-                      {...register(`documentos.${index}.numero`)}
-                      placeholder="Digite o numero do documento"
-                      aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </InputGroup>
-                </div>
-                <div className="label-data">
-                  <InputGroup className="mb-3">
-                    <InputGroup.Text id="inputGroup-sizing-default">
-                      Data Emissao
-                    </InputGroup.Text>
-                    <Form.Control
-                      {...register(`documentos.${index}.dataEmissao`)}
-                      placeholder="27/04/2001"
-                      aria-label="Default"
-                      aria-describedby="inputGroup-sizing-default"
-                    />
-                  </InputGroup>
-                </div>
-              </Form.Group>
-              <Button
-                variant="danger"
-                type="button"
-                onClick={() => remove(index)}
-              >
-                Delete
-              </Button>
-            </div>
-          );
-        })}
-        <Button
-          type="button"
-          variant="primary"
-          onClick={() => {
-            append({
-              tipo: "",
-              numero: "",
-              dataEmissao: "",
-            });
-          }}
-        >
-          Mais um
-        </Button>
-        <Button type="submit" variant="dark">
-          Adicionar
-        </Button>
+        <div className="testeDiv">
+          {fields.map((item, index) => {
+            return (
+              <div className="teste" key={item.id}>
+                <Form.Group className="controll-info">
+                  <div className="label-numbers">
+                    <InputGroup className="mb-3">
+                      <InputGroup.Text id="inputGroup-sizing-default">
+                        Tipo
+                      </InputGroup.Text>
+                      <Form.Control
+                        {...register(`documentos.${index}.tipo`)}
+                        placeholder="Digite o tipo do Documento : CPF, RG ou PASSAPORTE"
+                        aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default"
+                      />
+                    </InputGroup>
+                  </div>
+                  <div className="label-numbers">
+                    <InputGroup className="mb-3">
+                      <InputGroup.Text id="inputGroup-sizing-default">
+                        Numero do Documento
+                      </InputGroup.Text>
+                      <Form.Control
+                        {...register(`documentos.${index}.numero`)}
+                        placeholder="Digite o numero do documento"
+                        aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default"
+                      />
+                    </InputGroup>
+                  </div>
+                  <div className="label-data">
+                    <InputGroup className="mb-3">
+                      <InputGroup.Text id="inputGroup-sizing-default">
+                        Data Emissao
+                      </InputGroup.Text>
+                      <Form.Control
+                        {...register(`documentos.${index}.dataEmissao`)}
+                        placeholder="27/04/2001"
+                        aria-label="Default"
+                        aria-describedby="inputGroup-sizing-default"
+                      />
+                    </InputGroup>
+                  </div>
+                </Form.Group>
+                <Button
+                  variant="danger"
+                  type="button"
+                  onClick={() => remove(index)}
+                >
+                  Delete
+                </Button>
+              </div>
+            );
+          })}
+          <Button
+            type="button"
+            variant="primary"
+            onClick={() => {
+              append({
+                tipo: "",
+                numero: "",
+                dataEmissao: "",
+              });
+            }}
+          >
+            Mais um
+          </Button>
+          <Button type="submit" variant="dark">
+            Adicionar
+          </Button>
+        </div>
       </Form>
     );
   }
