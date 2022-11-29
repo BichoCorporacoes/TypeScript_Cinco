@@ -93,6 +93,9 @@ export default function ProfileCliente() {
             <div className="info">
               <div className="perfil">
                 <div className="info-perfil">
+                  <Link to={`/cliente/cadastro-continue/${user?.id}`}>
+                    Adicionar itens
+                  </Link>
                   <h3>Nome: {user?.nome}</h3>
                   <p>Nome Social: {user?.nomeSocial}</p>
                 </div>

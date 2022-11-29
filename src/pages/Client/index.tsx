@@ -25,14 +25,14 @@ export default function Cliente() {
             {deps &&
               deps.map((cli) => {
                 return (
-                  <>
+                  <div key={cli.id}>
                     {cliente.card(
                       `${cli.nome}`,
                       `${cli?.documentos?.[0]?.numero}`,
                       `${cli?.acomodacao?.nomeAcomadacao}`,
                       `${cli.id}`
                     )}
-                  </>
+                  </div>
                 );
               })}
           </div>

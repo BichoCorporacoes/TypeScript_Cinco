@@ -47,7 +47,6 @@ export default function CadastroFuncionario() {
 
   const onSubmit = useCallback(async (data: CadastroFuncionario) => {
     cadastroFuncionario(data);
-    console.log(data);
   }, []);
 
   const {
