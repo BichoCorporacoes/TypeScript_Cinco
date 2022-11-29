@@ -49,8 +49,6 @@ export default function AuthProvider({ children }: AuthProvider) {
   }
   function Logout() {
     setUser(null);
-    sessionStorage.removeItem("user-info");
-    sessionStorage.removeItem("Bicho-Corps-ZeroPirata");
   }
   return (
     <AuthContext.Provider

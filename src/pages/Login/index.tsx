@@ -34,7 +34,6 @@ export default function LoginPage() {
   });
   return (
     <Z.Main>
-      <NavBarAtlantis />
       <main className="main">
         <div className="login-content">
           <Form onSubmit={handleSubmit(onSubmit)} className="formulario">

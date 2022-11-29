@@ -61,20 +61,20 @@ export default class DocumentoRegistro {
 
     return (
       <Form onSubmit={handleSubmit(onSubmit)} className="docs-controll">
-        {[
-          status.type === "error" ? (
-            <Alert
-              key="danger"
-              variant="danger"
-              style={{ textAlign: "center" }}
-            >
-              {status.mensagem}
-            </Alert>
-          ) : (
-            ""
-          ),
-        ]}
         <div className="testeDiv">
+          {[
+            status.type === "error" ? (
+              <Alert
+                key="danger"
+                variant="danger"
+                style={{ textAlign: "center" }}
+              >
+                {status.mensagem}
+              </Alert>
+            ) : (
+              ""
+            ),
+          ]}
           {fields.map((item, index) => {
             return (
               <div className="teste" key={item.id}>

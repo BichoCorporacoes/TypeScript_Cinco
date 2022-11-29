@@ -51,52 +51,78 @@ export const Home = styled.div`
       border: 1px solid #0d6efd;
     }
     .documento {
-      h3 {
-        font-weight: bolder;
-        text-align: center;
-      }
-      .controll-documentos {
-      }
-      .controll {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+      width: 70%;
+      display: flex;
+      margin: 0 auto;
+      height: 650px;
+      overflow-x: hidden;
+      .docs-controll {
         width: 100%;
-        .form-Controll {
-          color: black;
-          font-size: 1.25em;
+        h3 {
           font-weight: bolder;
+          text-align: center;
         }
-        .check-doc {
+        .controll-documentos {
+        }
+        .testeDiv {
+          height: 100%;
+          overflow-x: hidden;
+        }
+        .controll {
           display: flex;
-        }
-      }
-      .controll-info {
-        width: 100%;
-        .label-numbers {
-          margin-top: 1em;
-          text-align: center;
+          flex-direction: row;
+          justify-content: center;
           width: 100%;
-          label {
-            font-size: 1em;
+          .form-Controll {
+            color: black;
+            font-size: 1.25em;
             font-weight: bolder;
-            width: 100%;
+          }
+          .check-doc {
+            display: flex;
           }
         }
-        .label-data {
-          margin-top: 1em;
-          text-align: center;
+        .controll-info {
           width: 100%;
-          label {
-            font-size: 1em;
-            font-weight: bolder;
+          .label-numbers {
+            margin-top: 1em;
+            text-align: center;
             width: 100%;
+            label {
+              font-size: 1em;
+              font-weight: bolder;
+              width: 100%;
+            }
+          }
+          .label-data {
+            margin-top: 1em;
+            text-align: center;
+            width: 100%;
+            label {
+              font-size: 1em;
+              font-weight: bolder;
+              width: 100%;
+            }
           }
         }
+        .label-btn {
+          margin: 1em 0;
+          text-align: center;
+        }
       }
-      .label-btn {
-        margin: 1em 0;
-        text-align: center;
+      .testeDiv::-webkit-scrollbar {
+        width: 0.5em;
+      }
+      .testeDiv::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: #cacaca;
+      }
+      .testeDiv::-webkit-scrollbar-thumb {
+        background-color: #343434;
+      }
+      .testeDiv::-webkit-scrollbar-thumb:hover {
+        background-color: #343434;
       }
     }
     .telefones {
@@ -122,7 +148,7 @@ export const Home = styled.div`
             height: 50px;
             transition: 0.5s;
           }
-          .btn-submit{
+          .btn-submit {
             position: absolute;
             top: 50%;
             right: 60%;
